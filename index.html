@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Site</title>
+</head>
+<body>
+    <h1>Login</h1>
+    <p>Digite o que pede:</p>
+
+    <form>
+        <label>Nome:</label>
+        <input type="text" name="nome"><br><br>
+
+        <label>Senha:</label>
+        <input type="password" name="Password" id="Password">
+        <button type="button" onclick="mostrarSenha()" >Mostrar</button><br><br>
+
+        <input type="submit" value="Enviar">
+    </form>
+    <script>
+        function mostrarSenha() {
+            const senha = document.getElementById("Password")
+            if (senha.type === "password") {
+                senha.type = "text"
+            } else {
+                senha.type = "password"
+            }    
+        }
+    </script>
+</body>
+</html>
